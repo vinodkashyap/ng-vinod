@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>My First Angular App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+</head>
+<body>
+Name: <input type="text" ng-model="name" id="nameId" placeholder="Name"><br />
+
+<!-- Using {{}} to bind data -->
+Hello {{name}} !! I Love ng-model!!<br/>
+
+<!-- Using ng-bind to bind data -->
+Hello <span ng-bind="name"></span> !! I Love ng-model!!<br/>
+
+<!-- This will not print {{}} in output -->
+I love to use expressions {{}} in angular application.<br/>
+
+<!-- Using ng-non-bindable to not to bind data -->
+<span ng-non-bindable>Hello {{name}} !! I Love ng-model!!<span><br/>
+<span ng-non-bindable>I love to use expressions {{}} in angular application.</span>
+</body>
+</html>
