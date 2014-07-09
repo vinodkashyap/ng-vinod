@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>My First Angular App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+</head>
+<body>
+Sum of 2 and 3 is {{2+3}}.<br/>
+{{"I love" + " ng-vinod" + " website"}}<br/>
+{{"This will not sum: " + 2 + 3}}
+</body>
+</html>
