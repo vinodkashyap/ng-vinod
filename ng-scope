@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>My First Angular App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+</head>
+<body>
+<b>I am Root Scope</b><br/>
+Name: {{name}} <br/>
+<div ng-controller="ParentController">
+	<div ng-controller="ChildController">
+		<b>I am inside Child</b><br/>
+		Name: {{name}} <br/>
+		My age: {{age}} <br/>
+		Gender: {{gender}} 
+	</div>
+<b>I am inside Parent</b><br/>
+Name: {{name}} <br/>
+My age: {{age}}. 
+</div>
+</body>
+<script>
+var app = angular.module('myApp', []);
+app.run(function($rootScope){
+	$rootScope.name = "NG-VINOD";
+});
+app.controller("ParentController",function($scope){
+	$scope.name = "Vinod";
+	$scope.age = "30";
+});
+app.controller("ChildController",function($scope){
+	$scope.name = "ng-vinod";
+	$scope.gender = "male";
+});
+</script>
+</html>
